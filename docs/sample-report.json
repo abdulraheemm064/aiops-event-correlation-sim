@@ -1,0 +1,879 @@
+{
+  "label": "SIMULATION RESULT ON SYNTHETIC DATA - not a measurement of any real environment",
+  "disclaimer": "Representative portfolio project built with synthetic data. Not derived from any employer or client code.",
+  "version": "1.0.0",
+  "scenario": {
+    "hours": 24,
+    "seed": 7,
+    "incidents": [
+      {
+        "incident_id": "INC-SIM-001",
+        "root_node": "cbk-dwh-app-01",
+        "start": 2217,
+        "end": 5577,
+        "fix_minutes": 18
+      },
+      {
+        "incident_id": "INC-SIM-002",
+        "root_node": "cb-acc-sw-05",
+        "start": 8307,
+        "end": 10047,
+        "fix_minutes": 55
+      },
+      {
+        "incident_id": "INC-SIM-003",
+        "root_node": "cb-core-sw-02",
+        "start": 16701,
+        "end": 18921,
+        "fix_minutes": 58
+      },
+      {
+        "incident_id": "INC-SIM-004",
+        "root_node": "cb-acc-sw-02",
+        "start": 22629,
+        "end": 23829,
+        "fix_minutes": 31
+      },
+      {
+        "incident_id": "INC-SIM-005",
+        "root_node": "cbk-tel-app-02",
+        "start": 30542,
+        "end": 33362,
+        "fix_minutes": 56
+      },
+      {
+        "incident_id": "INC-SIM-006",
+        "root_node": "cb-acc-sw-06",
+        "start": 38701,
+        "end": 42001,
+        "fix_minutes": 42
+      },
+      {
+        "incident_id": "INC-SIM-007",
+        "root_node": "APP-PaymentsGateway",
+        "start": 44659,
+        "end": 46339,
+        "fix_minutes": 19
+      },
+      {
+        "incident_id": "INC-SIM-008",
+        "root_node": "cbk-tel-db-01",
+        "start": 52614,
+        "end": 53574,
+        "fix_minutes": 25
+      },
+      {
+        "incident_id": "INC-SIM-009",
+        "root_node": "cb-acc-sw-03",
+        "start": 59831,
+        "end": 61151,
+        "fix_minutes": 27
+      },
+      {
+        "incident_id": "INC-SIM-010",
+        "root_node": "cbk-ob-app-01",
+        "start": 67733,
+        "end": 69353,
+        "fix_minutes": 16
+      },
+      {
+        "incident_id": "INC-SIM-011",
+        "root_node": "cb-acc-sw-05",
+        "start": 74767,
+        "end": 78067,
+        "fix_minutes": 28
+      },
+      {
+        "incident_id": "INC-SIM-012",
+        "root_node": "cb-acc-sw-03",
+        "start": 80715,
+        "end": 83895,
+        "fix_minutes": 15
+      }
+    ]
+  },
+  "evaluation": {
+    "raw_alerts": 1609,
+    "deduplicated_alerts": 258,
+    "after_flap_suppression": 222,
+    "flapping_suppressed": 4,
+    "correlated_groups": 144,
+    "actionable_incidents": 19,
+    "noise_reduction_pct": 98.8,
+    "dedup_reduction_pct": 84.0,
+    "true_incidents": 12,
+    "incidents_detected": 12,
+    "mean_fragments_per_incident": 1.0,
+    "group_purity_pct": 97.4,
+    "rca_top1_accuracy_pct": 75.0,
+    "rca_top3_accuracy_pct": 83.3,
+    "mttr_baseline_min": 109.8,
+    "mttr_aiops_min": 55.0,
+    "mttr_improvement_pct": 49.9,
+    "noise_groups_actionable": 7,
+    "assumptions": {
+      "baseline_minutes_per_alert": 2.0,
+      "baseline_triage_cap": 45.0,
+      "baseline_diagnosis": 40.0,
+      "aiops_triage": 5.0,
+      "aiops_diagnosis_correct_rca": 10.0,
+      "aiops_diagnosis_wrong_rca": 40.0
+    },
+    "per_incident": [
+      {
+        "incident": "INC-SIM-001",
+        "root_node": "cbk-dwh-app-01",
+        "raw_alerts": 12,
+        "groups": 1,
+        "priority": "P2",
+        "top_candidate": "APP-DataWarehouse",
+        "rca_top1": false,
+        "mttr_baseline_min": 82.0,
+        "mttr_aiops_min": 63.0
+      },
+      {
+        "incident": "INC-SIM-002",
+        "root_node": "cb-acc-sw-05",
+        "raw_alerts": 84,
+        "groups": 1,
+        "priority": "P1",
+        "top_candidate": "cb-acc-sw-05",
+        "rca_top1": true,
+        "mttr_baseline_min": 140.0,
+        "mttr_aiops_min": 70.0
+      },
+      {
+        "incident": "INC-SIM-003",
+        "root_node": "cb-core-sw-02",
+        "raw_alerts": 240,
+        "groups": 1,
+        "priority": "P1",
+        "top_candidate": "cb-core-sw-02",
+        "rca_top1": true,
+        "mttr_baseline_min": 143.0,
+        "mttr_aiops_min": 73.0
+      },
+      {
+        "incident": "INC-SIM-004",
+        "root_node": "cb-acc-sw-02",
+        "raw_alerts": 95,
+        "groups": 1,
+        "priority": "P1",
+        "top_candidate": "cb-acc-sw-02",
+        "rca_top1": true,
+        "mttr_baseline_min": 116.0,
+        "mttr_aiops_min": 46.0
+      },
+      {
+        "incident": "INC-SIM-005",
+        "root_node": "cbk-tel-app-02",
+        "raw_alerts": 24,
+        "groups": 1,
+        "priority": "P2",
+        "top_candidate": "cbk-tel-app-02",
+        "rca_top1": true,
+        "mttr_baseline_min": 141.0,
+        "mttr_aiops_min": 71.0
+      },
+      {
+        "incident": "INC-SIM-006",
+        "root_node": "cb-acc-sw-06",
+        "raw_alerts": 72,
+        "groups": 1,
+        "priority": "P1",
+        "top_candidate": "cb-acc-sw-06",
+        "rca_top1": true,
+        "mttr_baseline_min": 127.0,
+        "mttr_aiops_min": 57.0
+      },
+      {
+        "incident": "INC-SIM-007",
+        "root_node": "APP-PaymentsGateway",
+        "raw_alerts": 12,
+        "groups": 1,
+        "priority": "P1",
+        "top_candidate": "cb-lb-01",
+        "rca_top1": false,
+        "mttr_baseline_min": 83.0,
+        "mttr_aiops_min": 64.0
+      },
+      {
+        "incident": "INC-SIM-008",
+        "root_node": "cbk-tel-db-01",
+        "raw_alerts": 8,
+        "groups": 1,
+        "priority": "P2",
+        "top_candidate": "APP-BranchTeller",
+        "rca_top1": false,
+        "mttr_baseline_min": 81.0,
+        "mttr_aiops_min": 70.0
+      },
+      {
+        "incident": "INC-SIM-009",
+        "root_node": "cb-acc-sw-03",
+        "raw_alerts": 69,
+        "groups": 1,
+        "priority": "P1",
+        "top_candidate": "cb-acc-sw-03",
+        "rca_top1": true,
+        "mttr_baseline_min": 112.0,
+        "mttr_aiops_min": 42.0
+      },
+      {
+        "incident": "INC-SIM-010",
+        "root_node": "cbk-ob-app-01",
+        "raw_alerts": 12,
+        "groups": 1,
+        "priority": "P1",
+        "top_candidate": "cbk-ob-app-01",
+        "rca_top1": true,
+        "mttr_baseline_min": 80.0,
+        "mttr_aiops_min": 31.0
+      },
+      {
+        "incident": "INC-SIM-011",
+        "root_node": "cb-acc-sw-05",
+        "raw_alerts": 36,
+        "groups": 1,
+        "priority": "P2",
+        "top_candidate": "cb-acc-sw-05",
+        "rca_top1": true,
+        "mttr_baseline_min": 113.0,
+        "mttr_aiops_min": 43.0
+      },
+      {
+        "incident": "INC-SIM-012",
+        "root_node": "cb-acc-sw-03",
+        "raw_alerts": 60,
+        "groups": 1,
+        "priority": "P1",
+        "top_candidate": "cb-acc-sw-03",
+        "rca_top1": true,
+        "mttr_baseline_min": 100.0,
+        "mttr_aiops_min": 30.0
+      }
+    ]
+  },
+  "actionable_groups": [
+    {
+      "group_id": "GRP0004",
+      "start_s": 2283,
+      "priority": "P2",
+      "score": 70.5,
+      "nodes": [
+        "APP-DataWarehouse"
+      ],
+      "raw_events": 12,
+      "impacted_services": [
+        "Data Warehouse"
+      ],
+      "candidates": [
+        {
+          "node": "APP-DataWarehouse",
+          "coverage": 1.0,
+          "inferred": false
+        }
+      ]
+    },
+    {
+      "group_id": "GRP0005",
+      "start_s": 2672,
+      "priority": "P3",
+      "score": 52.0,
+      "nodes": [
+        "APP-CardAuthorization",
+        "APP-ClaimsPortal"
+      ],
+      "raw_events": 9,
+      "impacted_services": [
+        "Card Authorization",
+        "Claims Portal"
+      ],
+      "candidates": [
+        {
+          "node": "cb-acc-sw-05",
+          "coverage": 1.0,
+          "inferred": true
+        },
+        {
+          "node": "APP-ClaimsPortal",
+          "coverage": 0.5,
+          "inferred": false
+        },
+        {
+          "node": "APP-CardAuthorization",
+          "coverage": 0.5,
+          "inferred": false
+        }
+      ]
+    },
+    {
+      "group_id": "GRP0016",
+      "start_s": 8307,
+      "priority": "P1",
+      "score": 100.0,
+      "nodes": [
+        "APP-CardAuthorization",
+        "APP-ClaimsPortal",
+        "APP-DataWarehouse",
+        "cb-acc-sw-05",
+        "cbk-card-db-01",
+        "cbk-clm-app-01",
+        "cbk-clm-app-02"
+      ],
+      "raw_events": 84,
+      "impacted_services": [
+        "Card Authorization",
+        "Claims Portal",
+        "Data Warehouse"
+      ],
+      "candidates": [
+        {
+          "node": "cb-acc-sw-05",
+          "coverage": 1.0,
+          "inferred": false
+        },
+        {
+          "node": "cbk-clm-app-02",
+          "coverage": 0.29,
+          "inferred": false
+        },
+        {
+          "node": "cbk-clm-app-01",
+          "coverage": 0.29,
+          "inferred": false
+        }
+      ]
+    },
+    {
+      "group_id": "GRP0025",
+      "start_s": 14320,
+      "priority": "P3",
+      "score": 52.0,
+      "nodes": [
+        "cbk-mob-app-01",
+        "cbk-ob-db-01"
+      ],
+      "raw_events": 12,
+      "impacted_services": [
+        "Mobile API",
+        "Online Banking"
+      ],
+      "candidates": [
+        {
+          "node": "cb-acc-sw-04",
+          "coverage": 1.0,
+          "inferred": true
+        },
+        {
+          "node": "cbk-ob-db-01",
+          "coverage": 0.5,
+          "inferred": false
+        },
+        {
+          "node": "cbk-mob-app-01",
+          "coverage": 0.5,
+          "inferred": false
+        }
+      ]
+    },
+    {
+      "group_id": "GRP0029",
+      "start_s": 16701,
+      "priority": "P1",
+      "score": 100.0,
+      "nodes": [
+        "APP-BranchTeller",
+        "APP-CardAuthorization",
+        "APP-ClaimsPortal",
+        "APP-DataWarehouse",
+        "APP-MobileAPI",
+        "APP-PaymentsGateway",
+        "APP-PolicyAdministration",
+        "cb-acc-sw-05",
+        "cb-acc-sw-06",
+        "cb-core-sw-02",
+        "cb-lb-02",
+        "cbk-card-db-01",
+        "cbk-clm-app-01",
+        "cbk-clm-app-02",
+        "cbk-dwh-db-01",
+        "cbk-mob-app-01",
+        "cbk-mob-app-02",
+        "cbk-ob-db-01",
+        "cbk-pol-app-02",
+        "cbk-tel-db-01"
+      ],
+      "raw_events": 240,
+      "impacted_services": [
+        "Card Authorization",
+        "Mobile API",
+        "Online Banking",
+        "Payments Gateway",
+        "Branch Teller",
+        "Claims Portal",
+        "Policy Administration",
+        "Data Warehouse"
+      ],
+      "candidates": [
+        {
+          "node": "cb-core-sw-02",
+          "coverage": 1.0,
+          "inferred": false
+        },
+        {
+          "node": "cb-acc-sw-05",
+          "coverage": 0.4,
+          "inferred": false
+        },
+        {
+          "node": "cb-lb-02",
+          "coverage": 0.25,
+          "inferred": false
+        }
+      ]
+    },
+    {
+      "group_id": "GRP0041",
+      "start_s": 22629,
+      "priority": "P1",
+      "score": 100.0,
+      "nodes": [
+        "APP-CardAuthorization",
+        "APP-ClaimsPortal",
+        "APP-DataWarehouse",
+        "cb-acc-sw-02",
+        "cbk-card-app-01",
+        "cbk-card-app-02",
+        "cbk-clm-db-01",
+        "cbk-dwh-app-01",
+        "cbk-dwh-app-02"
+      ],
+      "raw_events": 95,
+      "impacted_services": [
+        "Card Authorization",
+        "Claims Portal",
+        "Data Warehouse"
+      ],
+      "candidates": [
+        {
+          "node": "cb-acc-sw-02",
+          "coverage": 1.0,
+          "inferred": false
+        },
+        {
+          "node": "cbk-clm-db-01",
+          "coverage": 0.22,
+          "inferred": false
+        },
+        {
+          "node": "cbk-card-app-02",
+          "coverage": 0.22,
+          "inferred": false
+        }
+      ]
+    },
+    {
+      "group_id": "GRP0054",
+      "start_s": 30542,
+      "priority": "P2",
+      "score": 81.0,
+      "nodes": [
+        "APP-BranchTeller",
+        "cbk-tel-app-02"
+      ],
+      "raw_events": 24,
+      "impacted_services": [
+        "Branch Teller"
+      ],
+      "candidates": [
+        {
+          "node": "cbk-tel-app-02",
+          "coverage": 1.0,
+          "inferred": false
+        },
+        {
+          "node": "APP-BranchTeller",
+          "coverage": 0.5,
+          "inferred": false
+        }
+      ]
+    },
+    {
+      "group_id": "GRP0062",
+      "start_s": 35893,
+      "priority": "P3",
+      "score": 52.0,
+      "nodes": [
+        "APP-DataWarehouse",
+        "cbk-card-app-02"
+      ],
+      "raw_events": 12,
+      "impacted_services": [
+        "Card Authorization",
+        "Data Warehouse"
+      ],
+      "candidates": [
+        {
+          "node": "cb-acc-sw-02",
+          "coverage": 1.0,
+          "inferred": true
+        },
+        {
+          "node": "cbk-card-app-02",
+          "coverage": 0.5,
+          "inferred": false
+        },
+        {
+          "node": "APP-DataWarehouse",
+          "coverage": 0.5,
+          "inferred": false
+        }
+      ]
+    },
+    {
+      "group_id": "GRP0065",
+      "start_s": 38212,
+      "priority": "P1",
+      "score": 100.0,
+      "nodes": [
+        "APP-PaymentsGateway",
+        "APP-PolicyAdministration",
+        "cb-acc-sw-06",
+        "cbk-pay-app-02",
+        "cbk-pay-db-01",
+        "cbk-pol-app-01",
+        "cbk-pol-app-02"
+      ],
+      "raw_events": 87,
+      "impacted_services": [
+        "Payments Gateway",
+        "Policy Administration"
+      ],
+      "candidates": [
+        {
+          "node": "cb-acc-sw-06",
+          "coverage": 0.86,
+          "inferred": false
+        },
+        {
+          "node": "cbk-pay-app-02",
+          "coverage": 0.29,
+          "inferred": false
+        },
+        {
+          "node": "cbk-pol-app-02",
+          "coverage": 0.29,
+          "inferred": false
+        }
+      ]
+    },
+    {
+      "group_id": "GRP0079",
+      "start_s": 44535,
+      "priority": "P1",
+      "score": 91.0,
+      "nodes": [
+        "APP-MobileAPI",
+        "APP-PaymentsGateway"
+      ],
+      "raw_events": 23,
+      "impacted_services": [
+        "Mobile API",
+        "Payments Gateway"
+      ],
+      "candidates": [
+        {
+          "node": "cb-lb-01",
+          "coverage": 1.0,
+          "inferred": true
+        },
+        {
+          "node": "APP-MobileAPI",
+          "coverage": 0.5,
+          "inferred": false
+        },
+        {
+          "node": "APP-PaymentsGateway",
+          "coverage": 0.5,
+          "inferred": false
+        }
+      ]
+    },
+    {
+      "group_id": "GRP0082",
+      "start_s": 48003,
+      "priority": "P3",
+      "score": 52.0,
+      "nodes": [
+        "APP-DataWarehouse",
+        "cbk-card-app-01"
+      ],
+      "raw_events": 14,
+      "impacted_services": [
+        "Card Authorization",
+        "Data Warehouse"
+      ],
+      "candidates": [
+        {
+          "node": "cb-acc-sw-02",
+          "coverage": 1.0,
+          "inferred": true
+        },
+        {
+          "node": "cbk-card-app-01",
+          "coverage": 0.5,
+          "inferred": false
+        },
+        {
+          "node": "APP-DataWarehouse",
+          "coverage": 0.5,
+          "inferred": false
+        }
+      ]
+    },
+    {
+      "group_id": "GRP0092",
+      "start_s": 52691,
+      "priority": "P2",
+      "score": 78.0,
+      "nodes": [
+        "APP-BranchTeller"
+      ],
+      "raw_events": 8,
+      "impacted_services": [
+        "Branch Teller"
+      ],
+      "candidates": [
+        {
+          "node": "APP-BranchTeller",
+          "coverage": 1.0,
+          "inferred": false
+        }
+      ]
+    },
+    {
+      "group_id": "GRP0107",
+      "start_s": 59831,
+      "priority": "P1",
+      "score": 100.0,
+      "nodes": [
+        "APP-BranchTeller",
+        "APP-PaymentsGateway",
+        "APP-PolicyAdministration",
+        "cb-acc-sw-03",
+        "cbk-mob-app-02",
+        "cbk-pay-app-01",
+        "cbk-pay-app-02",
+        "cbk-pol-db-01"
+      ],
+      "raw_events": 84,
+      "impacted_services": [
+        "Mobile API",
+        "Payments Gateway",
+        "Branch Teller",
+        "Policy Administration"
+      ],
+      "candidates": [
+        {
+          "node": "cb-acc-sw-03",
+          "coverage": 0.75,
+          "inferred": false
+        },
+        {
+          "node": "cbk-pol-db-01",
+          "coverage": 0.25,
+          "inferred": false
+        },
+        {
+          "node": "cbk-pay-app-02",
+          "coverage": 0.25,
+          "inferred": false
+        }
+      ]
+    },
+    {
+      "group_id": "GRP0111",
+      "start_s": 62467,
+      "priority": "P3",
+      "score": 52.0,
+      "nodes": [
+        "cbk-card-db-01",
+        "cbk-dwh-db-01"
+      ],
+      "raw_events": 12,
+      "impacted_services": [
+        "Card Authorization",
+        "Data Warehouse"
+      ],
+      "candidates": [
+        {
+          "node": "cb-acc-sw-05",
+          "coverage": 1.0,
+          "inferred": true
+        },
+        {
+          "node": "cbk-dwh-db-01",
+          "coverage": 0.5,
+          "inferred": false
+        },
+        {
+          "node": "cbk-card-db-01",
+          "coverage": 0.5,
+          "inferred": false
+        }
+      ]
+    },
+    {
+      "group_id": "GRP0121",
+      "start_s": 67733,
+      "priority": "P1",
+      "score": 88.0,
+      "nodes": [
+        "cbk-ob-app-01"
+      ],
+      "raw_events": 12,
+      "impacted_services": [
+        "Online Banking"
+      ],
+      "candidates": [
+        {
+          "node": "cbk-ob-app-01",
+          "coverage": 1.0,
+          "inferred": false
+        }
+      ]
+    },
+    {
+      "group_id": "GRP0130",
+      "start_s": 74791,
+      "priority": "P2",
+      "score": 84.0,
+      "nodes": [
+        "APP-ClaimsPortal",
+        "cbk-clm-app-01",
+        "cbk-clm-app-02"
+      ],
+      "raw_events": 36,
+      "impacted_services": [
+        "Claims Portal"
+      ],
+      "candidates": [
+        {
+          "node": "cb-acc-sw-05",
+          "coverage": 1.0,
+          "inferred": true
+        },
+        {
+          "node": "cbk-clm-app-02",
+          "coverage": 0.67,
+          "inferred": false
+        },
+        {
+          "node": "cbk-clm-app-01",
+          "coverage": 0.67,
+          "inferred": false
+        }
+      ]
+    },
+    {
+      "group_id": "GRP0132",
+      "start_s": 75742,
+      "priority": "P3",
+      "score": 52.0,
+      "nodes": [
+        "cbk-mob-app-02",
+        "cbk-ob-db-01"
+      ],
+      "raw_events": 11,
+      "impacted_services": [
+        "Mobile API",
+        "Online Banking"
+      ],
+      "candidates": [
+        {
+          "node": "cb-acc-sw-04",
+          "coverage": 1.0,
+          "inferred": true
+        },
+        {
+          "node": "cbk-mob-app-02",
+          "coverage": 0.5,
+          "inferred": false
+        },
+        {
+          "node": "cbk-ob-db-01",
+          "coverage": 0.5,
+          "inferred": false
+        }
+      ]
+    },
+    {
+      "group_id": "GRP0136",
+      "start_s": 80753,
+      "priority": "P1",
+      "score": 100.0,
+      "nodes": [
+        "APP-PaymentsGateway",
+        "APP-PolicyAdministration",
+        "cbk-pay-app-01",
+        "cbk-pay-app-02",
+        "cbk-pol-db-01"
+      ],
+      "raw_events": 60,
+      "impacted_services": [
+        "Payments Gateway",
+        "Policy Administration"
+      ],
+      "candidates": [
+        {
+          "node": "cb-acc-sw-03",
+          "coverage": 1.0,
+          "inferred": true
+        },
+        {
+          "node": "cbk-pol-db-01",
+          "coverage": 0.4,
+          "inferred": false
+        },
+        {
+          "node": "cbk-pay-app-02",
+          "coverage": 0.4,
+          "inferred": false
+        }
+      ]
+    },
+    {
+      "group_id": "GRP0142",
+      "start_s": 83378,
+      "priority": "P3",
+      "score": 52.0,
+      "nodes": [
+        "cbk-card-db-01",
+        "cbk-clm-app-01"
+      ],
+      "raw_events": 11,
+      "impacted_services": [
+        "Card Authorization",
+        "Claims Portal"
+      ],
+      "candidates": [
+        {
+          "node": "cb-acc-sw-05",
+          "coverage": 1.0,
+          "inferred": true
+        },
+        {
+          "node": "cbk-clm-app-01",
+          "coverage": 0.5,
+          "inferred": false
+        },
+        {
+          "node": "cbk-card-db-01",
+          "coverage": 0.5,
+          "inferred": false
+        }
+      ]
+    }
+  ]
+}
